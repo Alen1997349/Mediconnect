@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/action_profile"
+        android:title="Profile" />
+    <item
+        android:id="@+id/action_view_appointment"
+        android:title="My Appointment" />
+
+    <item
+        android:id="@+id/action_view_prescription"
+        android:title="View Prescription" />
+    <item
+        android:id="@+id/action_order_medicine"
+        android:title="Order Medicine" />
+    <item
+        android:id="@+id/patient_logout"
+        android:title="Logout" />
+
+</menu>

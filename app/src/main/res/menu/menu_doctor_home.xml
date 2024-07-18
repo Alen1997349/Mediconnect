@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_home"
+        android:title="Home"/>
+    <item
+        android:id="@+id/action_profile"
+        android:title="Profile"/>
+    <item
+        android:id="@+id/action_edit_patient"
+        android:title="Edit Patient Details"/>
+    <item
+        android:id="@+id/action_patient_records"
+        android:title="Patient Records"/>
+    <item
+        android:id="@+id/action_pre_approval"
+        android:title="Pre-Approval Request"/>
+    <item
+        android:id="@+id/action_logout"
+        android:title="Logout"/>
+</menu>

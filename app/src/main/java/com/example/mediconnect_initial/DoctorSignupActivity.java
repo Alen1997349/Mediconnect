@@ -89,8 +89,8 @@ public class DoctorSignupActivity extends AppCompatActivity {
     }
 
     private void sendEmail(final String email, final int code) {
-        final String username = "sanalk00000@gmail.com";
-        final String password = "dmso pyyr jebq iqvb";
+        final String username = "mediconnectotp@gmail.com";
+        final String password = "fdio bdqo nhwt pous";
 
         // Capture all the data fields
         final String firstName = etFirstName.getText().toString();
@@ -195,3 +195,4 @@ public class DoctorSignupActivity extends AppCompatActivity {
         return true;
     }
 }
+

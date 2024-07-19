@@ -72,13 +72,6 @@
                 android:padding="12dp"
                 android:layout_marginTop="8dp" />
 
-            <EditText
-                android:id="@+id/et_disease_type"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Disease Type"
-                android:padding="12dp"
-                android:layout_marginTop="8dp" />
 
             <EditText
                 android:id="@+id/et_username"
@@ -96,17 +89,6 @@
                 android:inputType="textPassword"
                 android:padding="12dp"
                 android:layout_marginTop="8dp" />
-
-            <EditText
-                android:id="@+id/et_medical_history"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Medical History"
-                android:padding="12dp"
-                android:layout_marginTop="8dp"
-                android:inputType="textMultiLine"
-                android:minLines="5"
-                android:gravity="top" />
 
             <EditText
                 android:id="@+id/et_email"

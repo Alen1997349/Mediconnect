@@ -45,10 +45,8 @@ public class PatientSignupActivity extends AppCompatActivity {
         etLastName = findViewById(R.id.et_last_name);
         etEmergencyContact = findViewById(R.id.et_emergency_contact);
         etBloodType = findViewById(R.id.et_blood_type);
-        etDiseaseType = findViewById(R.id.et_disease_type);
         etUsername = findViewById(R.id.et_username);
         etPassword = findViewById(R.id.et_password);
-        etMedicalHistory = findViewById(R.id.et_medical_history);
         etEmail = findViewById(R.id.et_email);
         btn_verify = findViewById(R.id.btn_verify);
 
@@ -88,18 +86,17 @@ public class PatientSignupActivity extends AppCompatActivity {
     }
 
     private void sendEmail(final String email, final int code) {
-        final String username = "sanalk00000@gmail.com";
-        final String password = "dmso pyyr jebq iqvb";
+        final String username = "mediconnectotp@gmail.com";
+        final String password = "fdio bdqo nhwt pous";
 
         // Capture all the data fields
         final String firstName = etFirstName.getText().toString();
         final String lastName = etLastName.getText().toString();
         final String emergencyContact = etEmergencyContact.getText().toString();
         final String bloodType = etBloodType.getText().toString();
-        final String diseaseType = etDiseaseType.getText().toString();
         final String usernameText = etUsername.getText().toString();
         final String passwordText = etPassword.getText().toString();
-        final String medicalHistory = etMedicalHistory.getText().toString();
+
 
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
@@ -143,10 +140,8 @@ public class PatientSignupActivity extends AppCompatActivity {
                 intent.putExtra("lastName", lastName);
                 intent.putExtra("emergencyContact", emergencyContact);
                 intent.putExtra("bloodType", bloodType);
-                intent.putExtra("diseaseType", diseaseType);
                 intent.putExtra("username", usernameText);
                 intent.putExtra("password", passwordText);
-                intent.putExtra("medicalHistory", medicalHistory);
                 startActivity(intent);
             }
         };
@@ -167,17 +162,11 @@ public class PatientSignupActivity extends AppCompatActivity {
         } else if (TextUtils.isEmpty(etBloodType.getText().toString().trim())) {
             etBloodType.setError("Please enter Blood Type");
             return false;
-        } else if (TextUtils.isEmpty(etDiseaseType.getText().toString().trim())) {
-            etDiseaseType.setError("Please enter Disease Type");
-            return false;
         } else if (TextUtils.isEmpty(etUsername.getText().toString().trim())) {
             etUsername.setError("Please enter Username");
             return false;
         } else if (TextUtils.isEmpty(etPassword.getText().toString().trim())) {
             etPassword.setError("Please enter Password");
-            return false;
-        } else if (TextUtils.isEmpty(etMedicalHistory.getText().toString().trim())) {
-            etMedicalHistory.setError("Please enter Medical History");
             return false;
         } else if (TextUtils.isEmpty(etEmail.getText().toString().trim())) {
             etEmail.setError("Please enter Email");

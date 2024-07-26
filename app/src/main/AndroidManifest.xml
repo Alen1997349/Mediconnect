@@ -27,6 +27,7 @@
         <activity android:name=".PatientHomeActivity"/>
         <activity android:name=".PatientSignupActivity"/>
         <activity android:name=".PatientVerifyActivity"/>
+        <activity android:name=".ProfileActivity"/>
     </application>
 
 </manifest>

@@ -101,6 +101,8 @@ public class PatientHomeActivity extends AppCompatActivity {
             showToast("Order Medicine clicked");
             return true;
         } else if (itemId == R.id.patient_logout) {
+            showToast("Logout clicked");
+            startActivity(new Intent(PatientHomeActivity.this, MainActivity.class));
             return true;
         }
 

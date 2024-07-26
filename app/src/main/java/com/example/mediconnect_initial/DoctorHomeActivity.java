@@ -62,6 +62,9 @@ public class DoctorHomeActivity extends AppCompatActivity {
                 startActivity(intent);
             } else if (itemId == R.id.action_profile) {
                 showToast("Profile clicked");
+                Intent intent = new Intent(DoctorHomeActivity.this, ProfileActivity.class);
+                intent.putExtra("username", username);
+                startActivity(intent);
             } else if (itemId == R.id.action_edit_patient) {
                 showToast("Edit Patient Details clicked");
             } else if (itemId == R.id.action_patient_records) {

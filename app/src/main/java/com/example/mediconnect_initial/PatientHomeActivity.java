@@ -20,7 +20,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.example.mediconnect_initial.MainActivity;
 import com.google.android.material.navigation.NavigationView;
 
 public class PatientHomeActivity extends AppCompatActivity {
@@ -61,7 +60,12 @@ public class PatientHomeActivity extends AppCompatActivity {
 
         // Initialize Book Appointment Button
         Button buttonBookAppointment = findViewById(R.id.button_book_appointment);
-
+        buttonBookAppointment.setOnClickListener(v -> {
+            // Handle Book Appointment Button Click
+            Intent intent = new Intent(PatientHomeActivity.this, BookAppointmentActivity.class);
+            intent.putExtra("username", username); // Pass username to BookAppointmentActivity
+            startActivity(intent);
+        });
     }
 
     private SpannableString getSpannableTitle(String title) {
@@ -90,6 +94,9 @@ public class PatientHomeActivity extends AppCompatActivity {
             startActivity(new Intent(PatientHomeActivity.this, PatientHomeActivity.class));
             return true;
         } else if (itemId == R.id.action_profile) {
+            Intent intent = new Intent(PatientHomeActivity.this, PatientProfile.class);
+            intent.putExtra("username", getIntent().getStringExtra("username"));
+            startActivity(intent);
             return true;
         } else if (itemId == R.id.action_view_appointment) {
             showToast("View Appointment clicked");
@@ -97,7 +104,7 @@ public class PatientHomeActivity extends AppCompatActivity {
         } else if (itemId == R.id.action_view_prescription) {
             showToast("View Prescription clicked");
             return true;
-        } else if (itemId == R.id.action_order_medicine) {
+        } else if (itemId == R.id.action_prediction) {
             showToast("Order Medicine clicked");
             return true;
         } else if (itemId == R.id.patient_logout) {

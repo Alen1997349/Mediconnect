@@ -14,8 +14,8 @@
         android:id="@+id/action_view_prescription"
         android:title="View Prescription" />
     <item
-        android:id="@+id/action_order_medicine"
-        android:title="Order Medicine" />
+        android:id="@+id/action_prediction"
+        android:title="Prediction" />
     <item
         android:id="@+id/patient_logout"
         android:title="Logout" />

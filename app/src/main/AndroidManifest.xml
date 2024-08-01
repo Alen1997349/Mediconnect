@@ -28,6 +28,8 @@
         <activity android:name=".PatientSignupActivity"/>
         <activity android:name=".PatientVerifyActivity"/>
         <activity android:name=".ProfileActivity"/>
+        <activity android:name=".PatientProfile"/>
+        <activity android:name=".BookAppointmentActivity"/>
     </application>
 
 </manifest>

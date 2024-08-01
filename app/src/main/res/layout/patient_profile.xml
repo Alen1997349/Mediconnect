@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Main Content -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Custom Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/black"
+            app:titleTextColor="@android:color/white">
+
+            <!-- Spannable Title -->
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textColor="@android:color/white" />
+
+            <!-- Menu Icon -->
+            <ImageView
+                android:id="@+id/toolbar_menu_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_menu"
+                android:contentDescription="Menu"
+                android:layout_gravity="start"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- Profile Icon -->
+        <ImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_profile"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/toolbar"
+            android:layout_marginTop="16dp"
+            android:contentDescription="Profile Icon" />
+
+        <!-- Labels Below Profile Icon -->
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:inputType="text"
+            android:layout_below="@id/profile_icon"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/et_emergency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Emergency contact"
+            android:inputType="text"
+            android:layout_below="@id/et_name"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/et_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Medical history"
+            android:inputType="text"
+            android:layout_below="@id/et_emergency"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/et_disease"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Disease Type"
+            android:inputType="text"
+            android:layout_below="@id/et_history"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/et_blood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Blood type"
+            android:inputType="text"
+            android:layout_below="@id/et_disease"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/et_blood"
+            android:layout_marginTop="24dp" />
+
+        <!-- Your other content goes here -->
+
+    </RelativeLayout>
+
+    <!-- Navigation View -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/menu_patient_home" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

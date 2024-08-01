@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Main Content -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Custom Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/black"
+            app:titleTextColor="@android:color/white">
+
+            <!-- Spannable Title -->
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <!-- Menu Icon -->
+            <ImageView
+                android:id="@+id/toolbar_menu_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:padding="10dp"
+                android:src="@drawable/ic_menu" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- Date Picker Button -->
+
+        <Button
+            android:id="@+id/datePickerButton"
+            style="?android:spinnerStyle"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_marginTop="19dp"
+            android:gravity="center"
+            android:onClick="openDatePicker"
+            android:text="Select date"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/timePickerButton"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/datePickerButton"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Select Time"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true" />
+
+
+        <EditText
+            android:id="@+id/entry_specialization"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter Specialization"
+            android:layout_below="@id/timePickerButton"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true" />
+
+        <!-- Search Button -->
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_search"
+            android:layout_below="@id/timePickerButton"
+            android:layout_toRightOf="@+id/entry_specialization"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true" />
+
+        <!-- RecyclerView for Doctors -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_doctors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_button"
+            android:layout_marginTop="20dp" />
+    </RelativeLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/menu_patient_home" />
+</androidx.drawerlayout.widget.DrawerLayout>
